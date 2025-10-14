@@ -1,0 +1,1 @@
+fatal: Unable to create 'C:/Users/ntiis_oyq7qq1/.git/index.lock': File exists.

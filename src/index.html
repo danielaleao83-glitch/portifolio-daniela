@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Daniela Leão</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      background: #0f172a;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Fundo animado de partículas simples */
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: radial-gradient(circle, #0ff 0%, #000 100%);
+      animation: pulse 5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .fade-in-delay {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fundo animado -->
+  <div id="background"></div>
+
+  <!-- Cabeçalho -->
+  <header class="text-center py-12 fade-in">
+    <h1 class="text-5xl font-bold text-cyan-400 mb-2">Daniela Leão da Silva</h1>
+    <p class="text-lg text-gray-300">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 space-y-12">
+
+    <!-- Resumo Profissional -->
+    <section class="fade-in-delay">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
+      <p>Profissional de Tecnologia da Informação com mais de 18 anos de experiência em Infraestrutura, Redes, Cloud Computing e Suporte Técnico. Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e monitoramento de ambientes corporativos e inovação tecnológica.</p>
+    </section>
+
+    <!-- Formação Acadêmica -->
+    <section class="fade-in-delay">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Formação Acadêmica</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Pós-Graduação em Análise de Sistemas – UFRA (2011)</li>
+        <li>Tecnóloga em Redes de Computadores – ESAMAZ (2010)</li>
+      </ul>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section class="fade-in-delay">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Experiência Profissional</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
+        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técni
