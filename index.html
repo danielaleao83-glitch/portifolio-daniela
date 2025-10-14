@@ -21,7 +21,6 @@
       color: #e6edf3;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
-      position: relative;
       perspective: 1000px;
       cursor: default;
     }
@@ -45,18 +44,6 @@
     .card:hover {
       transform: translateY(-8px) scale(1.03);
       box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
-    }
-
-    h1 {
-      background: linear-gradient(90deg, #00ffff, #9b59b6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 3s infinite alternate;
-    }
-
-    @keyframes glow {
-      0% { filter: drop-shadow(0 0 5px #00ffff); }
-      100% { filter: drop-shadow(0 0 20px #9b59b6); }
     }
 
     a {
@@ -84,18 +71,25 @@
     }
 
     .profile-photo {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid rgba(0, 255, 255, 0.4);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+      border: 4px solid rgba(0, 255, 255, 0.4);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .profile-photo:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(155, 89, 182, 0.4);
+      box-shadow: 0 0 35px rgba(155, 89, 182, 0.5);
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 1px;
+      font-weight: 800;
+      color: #e6edf3;
     }
   </style>
 </head>
@@ -104,13 +98,13 @@
   <div id="tsparticles"></div>
 
   <!-- Cabeçalho -->
-  <header class="py-16 flex flex-col md:flex-row justify-center items-center text-center md:text-left gap-8" data-aos="fade-down">
-    <div>
+  <header class="py-16 flex flex-col md:flex-row justify-center items-center text-center md:text-left gap-12" data-aos="fade-down">
+    <div class="max-w-lg">
       <h1 class="text-5xl font-extrabold mb-3">Daniela Leão da Silva</h1>
-      <p class="text-lg text-gray-400">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
+      <p class="text-lg text-gray-300">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
     </div>
-    <div>
-      <img src="Img/foto.jpg" alt="Foto de Daniela Leão" class="profile-photo">
+    <div class="flex justify-center">
+      <img src="./Img/foto.jpg" alt="Foto de Daniela Leão" class="profile-photo">
     </div>
   </header>
 
@@ -120,7 +114,7 @@
     <section class="card text-center" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
       <p class="max-w-3xl mx-auto">
-        Profissional de Tecnologia da Informação com experiência sólida na area de Tecnologia,Infraestrutura, Redes, Cloud Computing e Suporte Técnico.
+        Profissional de Tecnologia da Informação com bastante conhecimento sólido na Area de TI , Redes, Cloud Computing e Suporte Técnico.
         Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e inovação tecnológica.
       </p>
     </section>
@@ -191,6 +185,7 @@
 
   </main>
 
+  <!-- Scripts -->
   <script>
     AOS.init({ duration: 1200, once: true });
 
