@@ -1,0 +1,4 @@
+portifolio-daniela/
+│ index.html
+└───Img/
+    │ foto.jpg
