@@ -1,46 +1,14 @@
-﻿<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Daniela Leão</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background: #0f172a;
-      color: #ffffff;
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
-    #background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-      background: radial-gradient(circle, #0ff 0%, #000 100%);
-      animation: pulse 5s infinite alternate;
-    }
-    @keyframes pulse { 0% {opacity: 0.5;} 100% {opacity: 1;} }
-    .fade-in {opacity: 0; animation: fadeIn 1s forwards;}
-    .fade-in-delay {opacity: 0; animation: fadeIn 1s forwards; animation-delay: 0.5s;}
-    @keyframes fadeIn {to {opacity: 1;}}
-  </style>
-</head>
-<body>
-  <div id="background"></div>
-  <header class="text-center py-12 fade-in">
-    <h1 class="text-5xl font-bold text-cyan-400 mb-2">Daniela Leão da Silva</h1>
-
-cd "C:\Users\ntiis_oyq7qq1\OneDrive\Área de Trabalho\portifolio-daniela"
-
-@'
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Daniela Leão</title>
+
+  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Estilos personalizados -->
   <style>
     body {
       background: #0f172a;
@@ -48,31 +16,67 @@ cd "C:\Users\ntiis_oyq7qq1\OneDrive\Área de Trabalho\portifolio-daniela"
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
     }
+
+    /* Fundo animado simples */
     #background {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: -1;
       background: radial-gradient(circle, #0ff 0%, #000 100%);
       animation: pulse 5s infinite alternate;
     }
-    @keyframes pulse { 0% {opacity: 0.5;} 100% {opacity: 1;} }
-    .fade-in {opacity: 0; animation: fadeIn 1s forwards;}
-    .fade-in-delay {opacity: 0; animation: fadeIn 1s forwards; animation-delay: 0.5s;}
-    @keyframes fadeIn {to {opacity: 1;}}
+
+    @keyframes pulse {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .fade-in-delay {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    a {
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #22d3ee;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Fundo animado -->
   <div id="background"></div>
+
+  <!-- Cabeçalho -->
   <header class="text-center py-12 fade-in">
     <h1 class="text-5xl font-bold text-cyan-400 mb-2">Daniela Leão da Silva</h1>
     <p class="text-lg text-gray-300">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
   </header>
+
   <main class="max-w-5xl mx-auto px-6 space-y-12">
+
+    <!-- Resumo Profissional -->
     <section class="fade-in-delay">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
       <p>Profissional de Tecnologia da Informação com mais de 18 anos de experiência em Infraestrutura, Redes, Cloud Computing e Suporte Técnico. Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e monitoramento de ambientes corporativos e inovação tecnológica.</p>
     </section>
+
+    <!-- Formação Acadêmica -->
     <section class="fade-in-delay">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Formação Acadêmica</h2>
       <ul class="list-disc ml-6 space-y-1">
@@ -80,20 +84,44 @@ cd "C:\Users\ntiis_oyq7qq1\OneDrive\Área de Trabalho\portifolio-daniela"
         <li>Tecnóloga em Redes de Computadores – ESAMAZ (2010)</li>
       </ul>
     </section>
+
+    <!-- Experiência Profissional -->
     <section class="fade-in-delay">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Experiência Profissional</h2>
       <ul class="list-disc ml-6 space-y-2">
-        <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
-        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</li>
-        <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</li>
-        <li><strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>: Criação de usuários AD/Exchange, monitoramento de links via Zabbix.</li>
-        <li><strong>SAT Sistemas – Analista de Suporte (2013)</strong>: Suporte remoto, testes de sistemas e configuração de redes.</li>
-        <li><strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>: Instalação de sistemas, manutenção de computadores e redes, treinamentos internos.</li>
-        <li><strong>ESAMAZ – Estágio Professora de Informática Avançada / Suporte Técnico (2008 – 2009)</strong></li>
+        <li>
+          <strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>
+          <p>Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</p>
+        </li>
+        <li>
+          <strong>Junto Telecom – Analista de Suporte (2016)</strong>
+          <p>Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</p>
+        </li>
+        <li>
+          <strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>
+          <p>Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</p>
+        </li>
+        <li>
+          <strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>
+          <p>Criação de usuários AD/Exchange, monitoramento de links via Zabbix.</p>
+        </li>
+        <li>
+          <strong>SAT Sistemas – Analista de Suporte (2013)</strong>
+          <p>Suporte remoto, testes de sistemas e configuração de redes.</p>
+        </li>
+        <li>
+          <strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>
+          <p>Instalação de sistemas, manutenção de computadores e redes, treinamentos internos.</p>
+        </li>
+        <li>
+          <strong>ESAMAZ – Estágio Professora de Informática Avançada / Suporte Técnico (2008 – 2009)</strong>
+        </li>
       </ul>
     </section>
+
+    <!-- Cursos / Certificações -->
     <section class="fade-in-delay">
-      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Cursos / Congressos</h2>
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Cursos / Certificações</h2>
       <ul class="list-disc ml-6 space-y-1">
         <li>Microsoft Cloud & DevOps: Azure AD, Segurança, Monitoramento, Governança, Azure DevOps, GitHub Copilot, Boards, Pipelines.</li>
         <li>Power BI – Relatórios e Dashboards.</li>
@@ -101,6 +129,8 @@ cd "C:\Users\ntiis_oyq7qq1\OneDrive\Área de Trabalho\portifolio-daniela"
         <li>Redes de Computadores, Configuração de Roteadores, Administração TI, Segurança da Informação</li>
       </ul>
     </section>
+
+    <!-- Competências Técnicas e Comportamentais -->
     <section class="fade-in-delay">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Competências Técnicas</h2>
       <ul class="list-disc ml-6 space-y-1">
@@ -116,12 +146,19 @@ cd "C:\Users\ntiis_oyq7qq1\OneDrive\Área de Trabalho\portifolio-daniela"
         <li>Comunicação clara e foco em resultados.</li>
       </ul>
     </section>
+
+    <!-- Contato -->
     <section class="fade-in-delay">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Contato</h2>
       <p>Endereço: Psg: Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
-      <p>Tel: (61) 982582993 | Email: <a href="mailto:Daniela.leao83@gmail.com" class="text-cyan-300 underline">Daniela.leao83@gmail.com</a></p>
+      <p>Telefone: (61) 98258-2993</p>
+      <p>Email: <a href="mailto:Daniela.leao83@gmail.com" class="text-cyan-300 underline">Daniela.leao83@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/danielaleao83/" class="text-cyan-300 underline">linkedin.com/in/danielaleao83</a></p>
     </section>
+
   </main>
+
+  <!-- Script simples para efeito de fundo seguindo o mouse -->
   <script>
     const bg = document.getElementById('background');
     document.addEventListener('mousemove', (e) => {
@@ -130,5 +167,6 @@ cd "C:\Users\ntiis_oyq7qq1\OneDrive\Área de Trabalho\portifolio-daniela"
       bg.style.background = `radial-gradient(circle at ${x*100}% ${y*100}%, #0ff, #000)`;
     });
   </script>
+
 </body>
 </html>
