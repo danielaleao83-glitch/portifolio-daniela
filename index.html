@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Daniela Leão</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Daniela Leão da Silva</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS (Animate on Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- AOS (Animações) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- tsParticles -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
 
   <style>
     body {
-      background: linear-gradient(135deg, #0a0f1e, #1a1f2e);
+      background: radial-gradient(circle at top, #0d1117, #000);
       color: #e6edf3;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       overflow-x: hidden;
     }
 
-    #tsparticles {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+    h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #00e6e6;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
     }
 
     .card {
-      background: rgba(28, 33, 45, 0.95);
+      background: rgba(22, 27, 34, 0.85);
       border: 1px solid rgba(0, 255, 255, 0.15);
-      border-radius: 1.25rem;
-      padding: 2rem;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
     }
 
-    .card:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
+    .profile-photo {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 1rem;
+      border: 3px solid #00ffff30;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
     }
 
     a {
@@ -55,69 +56,48 @@
 
     .social a {
       background: linear-gradient(90deg, #00bcd4, #9b59b6);
-      padding: 0.5rem 1.2rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 0.75rem;
-      color: #fff;
+      color: white;
       font-weight: 600;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
     }
 
     .social a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
-    }
-
-    .profile-photo {
-      width: 200px;
-      height: 200px;   /* quadrada */
-      object-fit: cover;
-      border: 4px solid rgba(0, 255, 255, 0.4);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .profile-photo:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 35px rgba(155, 89, 182, 0.5);
-    }
-
-    h1 {
-      font-family: 'Inter', sans-serif;
-      letter-spacing: 1px;
-      font-weight: 800;
-      color: #e6edf3;
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.45);
     }
   </style>
 </head>
 
 <body>
-  <div id="tsparticles"></div>
-
   <!-- Cabeçalho -->
-  <header class="py-16 flex flex-col md:flex-row justify-between items-center px-6" data-aos="fade-down">
-    <div class="text-center md:text-left md:flex-1">
-      <h1 class="text-5xl font-extrabold">Daniela Leão da Silva</h1>
-      <p class="text-lg text-gray-300 mt-2">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
-    </div>
-    <div class="flex justify-center md:justify-end mt-6 md:mt-0">
-      <img src="./Img/foto.jpg" alt="Foto de Daniela Leão" class="profile-photo">
-    </div>
+  <header class="flex flex-col items-center text-center py-16" data-aos="fade-down">
+    <h1>Daniela Leão da Silva</h1>
+    <p class="text-gray-400 mt-4 text-xl">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 space-y-12">
+  <!-- Foto e Resumo -->
+  <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 items-center" data-aos="fade-up">
+    <div class="flex justify-center">
+      <div class="card text-center md:text-left">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
+        <p>
+          Profissional de Tecnologia da Informação com conhecimento sólido TI ,Docente na Area citada, Infraestrutura, Redes, Cloud Computing e Suporte Técnico.
+          Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e inovação tecnológica.
+        </p>
+      </div>
+    </div>
+    <div class="flex justify-center md:justify-end">
+      <img src="Img/Foto.jpg" alt="Foto de Daniela Leão" class="profile-photo" />
+    </div>
+  </section>
 
-    <!-- Resumo -->
-    <section class="card text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
-      <p class="max-w-3xl mx-auto">
-        Profissional de Tecnologia da Informação com bastante conhecimento sólido na Área de TI, Redes, Cloud Computing e Suporte Técnico.
-        Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e inovação tecnológica.
-      </p>
-    </section>
+  <main class="max-w-5xl mx-auto px-6 space-y-12 mt-12">
 
     <!-- Formação -->
-    <section class="card text-left" data-aos="fade-up" data-aos-delay="100">
+    <section class="card" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Formação Acadêmica</h2>
       <ul class="list-disc ml-6 space-y-1">
         <li>Pós-Graduação em Análise de Sistemas – UFRA (2011)</li>
@@ -126,39 +106,40 @@
     </section>
 
     <!-- Experiência -->
-    <section class="card text-left" data-aos="fade-up" data-aos-delay="200">
+    <section class="card" data-aos="fade-up" data-aos-delay="100">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Experiência Profissional</h2>
       <ul class="list-disc ml-6 space-y-2">
         <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
-        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</li>
+        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes e pesquisa de soluções inovadoras.</li>
         <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</li>
-        <li><strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>: Criação de usuários AD/Exchange, monitoramento de links via Zabbix.</li>
-        <li><strong>SAT Sistemas – Analista de Suporte (2013)</strong>: Suporte remoto, testes de sistemas e configuração de redes.</li>
-        <li><strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>: Instalação de sistemas, manutenção de computadores e redes, treinamentos internos.</li>
+        <li><strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>: Criação de usuários AD/Exchange e monitoramento de links via Zabbix.</li>
+        <li><strong>SAT Sistemas – Analista de Suporte (2013)</strong>: Suporte remoto e configuração de redes.</li>
+        <li><strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>: Manutenção e treinamentos internos.</li>
         <li><strong>ESAMAZ – Professora de Informática / Suporte Técnico (2008 – 2009)</strong></li>
       </ul>
     </section>
 
     <!-- Cursos -->
-    <section class="card text-left" data-aos="fade-up" data-aos-delay="300">
+    <section class="card" data-aos="fade-up" data-aos-delay="200">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Cursos / Certificações</h2>
       <ul class="list-disc ml-6 space-y-1">
-        <li>Microsoft Cloud & DevOps: Azure AD, Segurança, Monitoramento, Governança, Azure DevOps, GitHub Copilot, Boards, Pipelines.</li>
+        <li>Microsoft Cloud & DevOps: Azure AD, Segurança, Governança, Azure DevOps, GitHub Copilot, Boards, Pipelines.</li>
         <li>Power BI – Relatórios e Dashboards.</li>
-        <li>IA Generativa – Starse Tech Academy (AI for Leaders / IA para Todos)</li>
-        <li>Redes de Computadores, Configuração de Roteadores, Administração TI, Segurança da Informação</li>
+        <li>IA Generativa – Starse Tech Academy (AI for Leaders / IA para Todos).</li>
+        <li>Redes de Computadores, Administração TI, Segurança da Informação.</li>
       </ul>
     </section>
 
     <!-- Competências -->
-    <section class="card text-left" data-aos="fade-up" data-aos-delay="400">
+    <section class="card" data-aos="fade-up" data-aos-delay="300">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Competências Técnicas</h2>
       <ul class="list-disc ml-6 space-y-1">
         <li>Cloud e Infraestrutura: Azure, DevOps, Exchange, Active Directory, VMware, ITIL.</li>
         <li>Monitoramento: Zabbix, OCS Inventory.</li>
         <li>Análise de Dados: Power BI.</li>
-        <li>Redes e Suporte: Montagem/Manutenção de Computadores, Configuração de Sistemas, troubleshooting.</li>
+        <li>Redes e Suporte: Montagem, Configuração e Troubleshooting.</li>
       </ul>
+
       <h2 class="text-3xl font-bold text-cyan-400 mt-6 mb-4">Competências Comportamentais</h2>
       <ul class="list-disc ml-6 space-y-1">
         <li>Gestão de projetos e governança de TI.</li>
@@ -168,12 +149,10 @@
     </section>
 
     <!-- Contato -->
-    <section class="card text-center" data-aos="fade-up" data-aos-delay="500">
+    <section class="card text-center" data-aos="fade-up" data-aos-delay="400">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Contato</h2>
       <p>Psg. Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
-      <p>📞 (61) 98258-2993 | ✉️ 
-        <a href="mailto:Daniela.leao83@gmail.com" class="underline">Daniela.leao83@gmail.com</a>
-      </p>
+      <p>📞 (61) 98258-2993 | ✉️ <a href="mailto:Daniela.leao83@gmail.com">Daniela.leao83@gmail.com</a></p>
       <div class="social flex justify-center space-x-6 mt-4">
         <a href="https://github.com/danielaleao83-glitch" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/danielaleao83" target="_blank">LinkedIn</a>
@@ -182,23 +161,8 @@
 
   </main>
 
-  <!-- Scripts -->
   <script>
     AOS.init({ duration: 1200, once: true });
-
-    tsParticles.load("tsparticles", {
-      particles: {
-        number: { value: 70 },
-        color: { value: "#00ffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.25 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1, direction: "none", outModes: "bounce" },
-        links: { enable: true, color: "#00ffff", distance: 130, opacity: 0.25 }
-      },
-      background: { color: "#0a0f1e" },
-      fpsLimit: 60
-    });
   </script>
 </body>
 </html>
