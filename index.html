@@ -8,129 +8,205 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+
   <style>
     body {
+      background: linear-gradient(135deg, #0a0f1e, #1a1f2e);
+      color: #e6edf3;
       font-family: 'Inter', sans-serif;
-      background: #0f172a;
-      color: #fff;
       overflow-x: hidden;
+      position: relative;
+      perspective: 1000px;
+      cursor: default;
     }
 
-    /* Fundo animado de partículas flutuantes */
-    #background {
+    #tsparticles {
       position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: radial-gradient(circle, #0ff 0%, #000 100%);
-      animation: pulse 6s infinite alternate;
     }
 
-    @keyframes pulse {
-      0% { opacity: 0.5; }
-      100% { opacity: 1; }
+    .card {
+      background: rgba(28, 33, 45, 0.95);
+      border: 1px solid rgba(0, 255, 255, 0.15);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
 
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1s forwards;
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
     }
 
-    .fade-in-delay {
-      opacity: 0;
-      animation: fadeIn 1s forwards;
-      animation-delay: 0.5s;
+    h1 {
+      background: linear-gradient(90deg, #00ffff, #9b59b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
     }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    @keyframes glow {
+      0% { filter: drop-shadow(0 0 5px #00ffff); }
+      100% { filter: drop-shadow(0 0 20px #9b59b6); }
     }
 
-    /* Resumo e foto lado a lado */
-    .profile-container {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      gap: 2rem;
+    a {
+      color: #00bcd4;
+      transition: color 0.3s ease;
     }
 
-    @media(min-width: 768px) {
-      .profile-container {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+    a:hover {
+      color: #9b59b6;
     }
 
-    .profile-text {
-      flex: 1;
-      text-align: center;
+    .social a {
+      background: linear-gradient(90deg, #00bcd4, #9b59b6);
+      padding: 0.5rem 1.2rem;
+      border-radius: 0.75rem;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    @media(min-width: 768px) {
-      .profile-text {
-        text-align: left;
-      }
+    .social a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
     }
 
     .profile-photo {
-      flex: 0 0 200px;
-      border-radius: 1rem;
-      border: 2px solid #0ff;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(0, 255, 255, 0.4);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(155, 89, 182, 0.4);
     }
   </style>
 </head>
+
 <body>
+  <div id="tsparticles"></div>
 
-  <!-- Fundo animado -->
-  <div id="background"></div>
-
-  <header class="text-center py-12 fade-in">
-    <h1 class="text-5xl font-bold text-cyan-400 mb-2">Daniela Leão da Silva</h1>
-    <p class="text-lg text-gray-300">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
+  <!-- Cabeçalho -->
+  <header class="py-16 flex flex-col md:flex-row justify-center items-center text-center md:text-left gap-8" data-aos="fade-down">
+    <div>
+      <h1 class="text-5xl font-extrabold mb-3">Daniela Leão da Silva</h1>
+      <p class="text-lg text-gray-400">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
+    </div>
+    <div>
+      <img src="Img/foto.jpg" alt="Foto de Daniela Leão" class="profile-photo">
+    </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 space-y-12 fade-in-delay">
+  <main class="max-w-5xl mx-auto px-6 space-y-12">
 
-    <!-- Resumo e foto -->
-    <section class="profile-container">
-      <div class="profile-text">
-        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
-        <p>Profissional de TI com mais de 18 anos de experiência em Infraestrutura, Cloud Computing, DevOps e Power BI. Especialista em governança de TI, automação, monitoramento e inovação tecnológica. Foco em resultados, trabalho em equipe e liderança técnica.</p>
-      </div>
-      <img src="sua-foto.jpg" alt="Foto Daniela Leão" class="profile-photo">
+    <!-- Resumo -->
+    <section class="card text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
+      <p class="max-w-3xl mx-auto">
+        Profissional de Tecnologia da Informação com experiência sólida na area de Tecnologia,Infraestrutura, Redes, Cloud Computing e Suporte Técnico.
+        Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e inovação tecnológica.
+      </p>
+    </section>
+
+    <!-- Formação -->
+    <section class="card text-left" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Formação Acadêmica</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Pós-Graduação em Análise de Sistemas – UFRA (2011)</li>
+        <li>Tecnóloga em Redes de Computadores – ESAMAZ (2010)</li>
+      </ul>
     </section>
 
     <!-- Experiência -->
-    <section>
+    <section class="card text-left" data-aos="fade-up" data-aos-delay="200">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Experiência Profissional</h2>
       <ul class="list-disc ml-6 space-y-2">
         <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
         <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</li>
         <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</li>
         <li><strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>: Criação de usuários AD/Exchange, monitoramento de links via Zabbix.</li>
+        <li><strong>SAT Sistemas – Analista de Suporte (2013)</strong>: Suporte remoto, testes de sistemas e configuração de redes.</li>
+        <li><strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>: Instalação de sistemas, manutenção de computadores e redes, treinamentos internos.</li>
+        <li><strong>ESAMAZ – Professora de Informática / Suporte Técnico (2008 – 2009)</strong></li>
+      </ul>
+    </section>
+
+    <!-- Cursos -->
+    <section class="card text-left" data-aos="fade-up" data-aos-delay="300">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Cursos / Certificações</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Microsoft Cloud & DevOps: Azure AD, Segurança, Monitoramento, Governança, Azure DevOps, GitHub Copilot, Boards, Pipelines.</li>
+        <li>Power BI – Relatórios e Dashboards.</li>
+        <li>IA Generativa – Starse Tech Academy (AI for Leaders / IA para Todos)</li>
+        <li>Redes de Computadores, Configuração de Roteadores, Administração TI, Segurança da Informação</li>
+      </ul>
+    </section>
+
+    <!-- Competências -->
+    <section class="card text-left" data-aos="fade-up" data-aos-delay="400">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Competências Técnicas</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Cloud e Infraestrutura: Azure, DevOps, Exchange, Active Directory, VMware, ITIL.</li>
+        <li>Monitoramento: Zabbix, OCS Inventory.</li>
+        <li>Análise de Dados: Power BI.</li>
+        <li>Redes e Suporte: Montagem/Manutenção de Computadores, Configuração de Sistemas, troubleshooting.</li>
+      </ul>
+      <h2 class="text-3xl font-bold text-cyan-400 mt-6 mb-4">Competências Comportamentais</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Gestão de projetos e governança de TI.</li>
+        <li>Trabalho em equipe e liderança técnica.</li>
+        <li>Comunicação clara e foco em resultados.</li>
       </ul>
     </section>
 
     <!-- Contato -->
-    <section>
+    <section class="card text-center" data-aos="fade-up" data-aos-delay="500">
       <h2 class="text-3xl font-bold text-cyan-400 mb-4">Contato</h2>
-      <p>Endereço: Psg: Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
-      <p>Tel: (61) 98258-2993 | Email: <a href="mailto:Daniela.leao83@gmail.com" class="text-cyan-300 underline">Daniela.leao83@gmail.com</a></p>
+      <p>Psg. Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
+      <p>📞 (61) 98258-2993 | ✉️ 
+        <a href="mailto:Daniela.leao83@gmail.com" class="underline">Daniela.leao83@gmail.com</a>
+      </p>
+      <div class="social flex justify-center space-x-6 mt-4">
+        <a href="https://github.com/danielaleao83-glitch" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/danielaleao83" target="_blank">LinkedIn</a>
+      </div>
     </section>
 
   </main>
 
-  <!-- Fundo segue o mouse -->
   <script>
-    const bg = document.getElementById('background');
-    document.addEventListener('mousemove', (e) => {
-      const x = e.clientX / window.innerWidth;
-      const y = e.clientY / window.innerHeight;
-      bg.style.background = `radial-gradient(circle at ${x*100}% ${y*100}%, #0ff, #000)`;
+    AOS.init({ duration: 1200, once: true });
+
+    tsParticles.load("tsparticles", {
+      particles: {
+        number: { value: 70 },
+        color: { value: "#00ffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.25 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1, direction: "none", outModes: "bounce" },
+        links: { enable: true, color: "#00ffff", distance: 130, opacity: 0.25 }
+      },
+      background: { color: "#0a0f1e" },
+      fpsLimit: 60
     });
   </script>
-
 </body>
 </html>
