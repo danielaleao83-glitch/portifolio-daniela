@@ -4,176 +4,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Daniela Leão</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background: #0f172a;
-      color: #ffffff;
       font-family: 'Inter', sans-serif;
-      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+      background: #0f172a;
+      color: white;
     }
 
-    a {
-      color: #22d3ee;
-      text-decoration: none;
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
 
-    /* Container */
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-    }
-
-    /* Cabeçalho */
-    .header {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    .header h1 {
-      font-size: 3rem;
-      color: #22d3ee;
-      margin-bottom: 0.5rem;
-    }
-
-    .header p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
-    }
-
-    /* Seções */
-    section h2 {
-      font-size: 2rem;
-      color: #22d3ee;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style: disc inside;
-    }
-
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Animações */
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1s forwards;
-    }
-
-    .delay-1 { animation-delay: 0.3s; }
-    .delay-2 { animation-delay: 0.6s; }
-    .delay-3 { animation-delay: 0.9s; }
-    .delay-4 { animation-delay: 1.2s; }
-    .delay-5 { animation-delay: 1.5s; }
-    .delay-6 { animation-delay: 1.8s; }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    /* Efeito hover nos blocos */
-    section:hover {
-      transform: translateY(-3px);
-      transition: transform 0.3s ease;
-    }
-
-    /* Responsividade */
-    @media (max-width: 600px) {
-      .header h1 {
-        font-size: 2rem;
-      }
-      .header p {
-        font-size: 1rem;
-      }
+    .profile-pic {
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+      max-width: 250px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Cabeçalho -->
-  <header class="header fade-in">
-    <h1>Daniela Leão da Silva</h1>
-    <p>Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
+  <!-- Canvas para partículas -->
+  <canvas id="particles"></canvas>
+
+  <header class="py-12">
+    <h1 class="text-5xl font-bold text-cyan-400 text-center mb-2 fade-in">Daniela Leão da Silva</h1>
+    <p class="text-lg text-gray-300 text-center fade-in">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
   </header>
 
-  <main class="container">
+  <main class="max-w-6xl mx-auto px-6 space-y-12">
 
-    <!-- Resumo Profissional -->
-    <section class="fade-in delay-1">
-      <h2>Resumo Profissional</h2>
-      <p>Profissional de TI com mais de 18 anos de experiência em Infraestrutura, Redes, Cloud, DevOps e suporte técnico. Especialista ITIL e Power BI, com atuação em governança, monitoramento e inovação tecnológica.</p>
+    <section class="flex flex-col md:flex-row items-center justify-between gap-8 fade-in">
+      <div class="md:w-2/3 text-center md:text-left">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
+        <p>Profissional de TI com mais de 18 anos de experiência em Infraestrutura, Redes, Cloud, DevOps e Suporte Técnico. Especialista ITIL e Power BI, com histórico em governança de TI, Azure, automação e inovação tecnológica.</p>
+      </div>
+      <div class="md:w-1/3 flex justify-center md:justify-end">
+        <img src="foto-sua.jpg" alt="Foto Daniela Leão" class="profile-pic">
+      </div>
     </section>
 
-    <!-- Formação Acadêmica -->
-    <section class="fade-in delay-2">
-      <h2>Formação Acadêmica</h2>
-      <ul>
-        <li>Pós-Graduação em Análise de Sistemas – UFRA (2011)</li>
-        <li>Tecnóloga em Redes de Computadores – ESAMAZ (2010)</li>
+    <section class="fade-in">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4 text-center">Experiência Profissional</h2>
+      <ul class="list-disc ml-6 space-y-2 max-w-3xl mx-auto">
+        <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
+        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</li>
+        <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</li>
       </ul>
     </section>
 
-    <!-- Experiência Profissional -->
-    <section class="fade-in delay-3">
-      <h2>Experiência Profissional</h2>
-      <ul>
-        <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, ITIL, DevOps.</li>
-        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes e documentação.</li>
-        <li><strong>Stefanini – Ministério da Justiça (2014 – 2015)</strong>: Governança de TI, relatórios técnicos e monitoramento.</li>
-        <li><strong>Outras experiências:</strong> Suporte técnico, monitoramento de links, manutenção de computadores, treinamento de usuários.</li>
-      </ul>
-    </section>
-
-    <!-- Cursos / Certificações -->
-    <section class="fade-in delay-4">
-      <h2>Cursos / Certificações</h2>
-      <ul>
-        <li>Azure Cloud, DevOps, GitHub Copilot, Boards e Pipelines</li>
-        <li>Power BI – Relatórios e Dashboards</li>
-        <li>IA Generativa – Starse Tech Academy (AI for Leaders / IA para Todos)</li>
-        <li>Redes de Computadores, Administração de TI, Segurança da Informação</li>
-      </ul>
-    </section>
-
-    <!-- Competências Técnicas e Comportamentais -->
-    <section class="fade-in delay-5">
-      <h2>Competências</h2>
-      <ul>
-        <li>Cloud: Azure, DevOps, Exchange, AD, VMware</li>
-        <li>Monitoramento: Zabbix, OCS Inventory</li>
-        <li>Análise de Dados: Power BI</li>
-        <li>Redes e Suporte Técnico: manutenção, troubleshooting</li>
-        <li>Gestão de Projetos e Governança</li>
-        <li>Trabalho em equipe, liderança técnica e comunicação clara</li>
-      </ul>
-    </section>
-
-    <!-- Contato -->
-    <section class="fade-in delay-6">
-      <h2>Contato</h2>
-      <p>Endereço: Psg: Lopo de Castro Nº12, Cidade Velha - Belém – PA</p>
-      <p>Telefone: (61) 98258-2993</p>
-      <p>Email: <a href="mailto:Daniela.leao83@gmail.com">Daniela.leao83@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/danielaleao83/">linkedin.com/in/danielaleao83</a></p>
+    <section class="fade-in text-center">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Contato</h2>
+      <p>📍 Psg: Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
+      <p>📞 (61) 98258-2993 | ✉️ <a href="mailto:Daniela.leao83@gmail.com" class="text-cyan-300 underline">Daniela.leao83@gmail.com</a></p>
     </section>
 
   </main>
+
+  <script>
+    // Configurações de partículas
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    const particles = [];
+    const particleCount = 100;
+
+    function random(min, max) { return Math.random() * (max - min) + min; }
+
+    class Particle {
+      constructor() {
+        this.x = random(0, width);
+        this.y = random(0, height);
+        this.size = random(1, 4);
+        this.speedX = random(-0.5, 0.5);
+        this.speedY = random(-0.5, 0.5);
+        this.color = `rgba(0, 255, 255, ${random(0.2,0.8)})`;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x > width || this.x < 0) this.speedX *= -1;
+        if (this.y > height || this.y < 0) this.speedY *= -1;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      for (let i = 0; i < particleCount; i++) particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    initParticles();
+    animate();
+  </script>
 
 </body>
 </html>
