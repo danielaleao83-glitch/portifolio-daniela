@@ -17,45 +17,17 @@
 
   <style>
     body {
-      background: #0b0f1a;
+      background-color: #0b0f1a;
       color: #e6edf3;
       font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
     }
 
-    /* Fundo de partículas */
-    #tsparticles {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    /* Card base */
-    .card {
-      background: rgba(22, 27, 34, 0.85);
-      border: 1px solid rgba(0, 255, 255, 0.15);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      transform-style: preserve-3d;
-    }
-    .card:hover {
-      transform: rotateY(3deg) rotateX(2deg) scale(1.02);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
-    }
-
-    /* Título */
     h1 {
       font-size: 3rem;
       font-weight: 900;
       color: #00ffff;
-      text-align: center;
-      margin-bottom: 1rem;
     }
 
-    /* Foto perfil */
     .profile-photo {
       width: 200px;
       height: 200px;
@@ -63,6 +35,13 @@
       border-radius: 0.75rem;
       border: 2px solid #00ffff;
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+
+    .card {
+      background: rgba(22, 27, 34, 0.85);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     a {
@@ -79,29 +58,29 @@
   <!-- Fundo animado -->
   <div id="tsparticles"></div>
 
-  <!-- Cabeçalho com nome -->
-  <header class="py-12" data-aos="fade-down">
+  <!-- Cabeçalho -->
+  <header class="text-center py-12">
     <h1>Daniela Leão da Silva</h1>
-    <p class="text-lg text-gray-400 text-center">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
+    <p class="text-gray-400 text-lg mt-2">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
   </header>
 
   <main class="max-w-6xl mx-auto px-6 space-y-12">
 
     <!-- Resumo + Foto -->
-    <section class="card flex flex-col md:flex-row items-center md:items-start gap-8" data-aos="fade-up">
-      <div class="flex-1 text-center md:text-left">
+    <section class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-up">
+      <div class="flex-1 card text-center md:text-left">
         <h2 class="text-2xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
         <p>
-          Profissional de Tecnologia da Informação com conhecimento sólido na Área de TI, Redes, Cloud Computing e Suporte Técnico.
+          Profissional de TI com conhecimento sólido na Área de TI, Redes, Cloud Computing e Suporte Técnico.
           Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e inovação tecnológica.
         </p>
       </div>
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 card">
         <img src="Img/Foto.jpg" alt="Foto de Daniela Leão" class="profile-photo">
       </div>
     </section>
 
-    <!-- Formação -->
+    <!-- Formação Acadêmica -->
     <section class="card" data-aos="fade-up" data-aos-delay="100">
       <h2 class="text-2xl font-bold text-cyan-400 mb-4">Formação Acadêmica</h2>
       <ul class="list-disc ml-6 space-y-1">
@@ -110,7 +89,7 @@
       </ul>
     </section>
 
-    <!-- Experiência -->
+    <!-- Experiência Profissional -->
     <section class="card" data-aos="fade-up" data-aos-delay="200">
       <h2 class="text-2xl font-bold text-cyan-400 mb-4">Experiência Profissional</h2>
       <ul class="list-disc ml-6 space-y-2">
@@ -165,7 +144,6 @@
 
   </main>
 
-  <!-- Scripts -->
   <script>
     AOS.init({ duration: 1200, once: true });
 
@@ -177,11 +155,4 @@
         opacity: { value: 0.3 },
         size: { value: 3 },
         move: { enable: true, speed: 1, direction: "none", outModes: "bounce" },
-        links: { enable: true, color: "#00ffff", distance: 120, opacity: 0.3 }
-      },
-      background: { color: "#0b0f1a" },
-      fpsLimit: 60
-    });
-  </script>
-</body>
-</html>
+        links:
