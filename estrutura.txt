@@ -1,6 +1,6 @@
-Portifolio-Daniela/
+portifolio-daniela/
 │
 ├─ index.html
+├─ .nojekyll
 ├─ Img/
-│   └─ Foto.jpg       ← sua foto quadrada
-└─ .nojekyll          ← impede o GitHub Pages de ignorar arquivos
+│   └─ Foto.jpg

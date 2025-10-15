@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Daniela Leão</title>
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS para animações -->
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
     body {
-      background: #0b0f1a;
+      background: linear-gradient(135deg, #0b0f1a 0%, #1a1f2b 100%);
       color: #e6edf3;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
@@ -22,15 +22,15 @@
 
     h1 {
       font-size: 3rem;
-      font-weight: 800;
-      color: #00ffff;
+      font-weight: 900;
       text-align: center;
+      color: #00ffff;
       margin-bottom: 0.5rem;
     }
 
     .profile-photo {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       border-radius: 1rem;
       object-fit: cover;
     }
@@ -41,7 +41,7 @@
       border-radius: 1rem;
       padding: 1.5rem;
       margin-bottom: 1.5rem;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
     }
 
     a {
@@ -54,11 +54,11 @@
   </style>
 </head>
 <body>
-  <main class="max-w-5xl mx-auto px-6 py-12">
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-12">
 
     <!-- Nome e Foto -->
-    <section class="flex flex-col md:flex-row items-center justify-between mb-12">
-      <h1 data-aos="fade-down">Daniela Leão da Silva</h1>
+    <section class="flex flex-col md:flex-row items-center justify-between" data-aos="fade-down">
+      <h1>Daniela Leão da Silva</h1>
       <img src="Img/Foto.jpg" alt="Foto de Daniela Leão" class="profile-photo mt-6 md:mt-0">
     </section>
 
@@ -71,7 +71,7 @@
       </p>
     </section>
 
-    <!-- Experiências -->
+    <!-- Experiências Profissionais -->
     <section class="card" data-aos="fade-up">
       <h2 class="text-2xl font-bold text-cyan-400 mb-4">Experiência Profissional</h2>
       <ul class="list-disc ml-6 space-y-2">
