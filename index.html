@@ -5,94 +5,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Daniela Leão</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS (Animate on Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- tsParticles -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
-
   <style>
+    /* Fonte e reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body {
-      background-color: #0b0f1a;
+      background: #0b0f1a;
       color: #e6edf3;
-      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
     }
 
-    h1 {
+    /* Fundo animado */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at 30% 30%, #00ffff33, transparent 30%),
+                  radial-gradient(circle at 70% 70%, #9b59b633, transparent 30%);
+      animation: moveBackground 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes moveBackground {
+      0% { transform: translate(0,0); }
+      50% { transform: translate(20px,20px); }
+      100% { transform: translate(0,0); }
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    header h1 {
       font-size: 3rem;
-      font-weight: 900;
+      text-align: center;
+      flex: 1;
       color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
     }
 
     .profile-photo {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
       object-fit: cover;
-      border-radius: 0.75rem;
-      border: 2px solid #00ffff;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+      margin-left: 40px;
+      border: 3px solid #00ffff;
+      box-shadow: 0 0 20px #00ffff55;
     }
 
-    .card {
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    section {
       background: rgba(22, 27, 34, 0.85);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
+      border-radius: 12px;
+      padding: 20px 30px;
+      box-shadow: 0 0 20px #00ffff11;
     }
 
-    a {
-      color: #00bcd4;
-      transition: color 0.3s ease;
+    section h2 {
+      color: #00ffff;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #00ffff33;
+      padding-bottom: 5px;
     }
-    a:hover {
+
+    section p, section li {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    ul { list-style: disc; margin-left: 20px; }
+
+    /* Contato centralizado */
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
       color: #9b59b6;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social a {
+      background: linear-gradient(90deg,#00bcd4,#9b59b6);
+      padding: 8px 16px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .social a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px #00ffff55;
+    }
+
+    /* Responsivo */
+    @media (max-width: 900px){
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .profile-photo {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
     }
   </style>
 </head>
-
 <body>
-  <!-- Fundo animado -->
-  <div id="tsparticles"></div>
 
-  <!-- Cabeçalho -->
-  <header class="text-center py-12">
+  <header>
     <h1>Daniela Leão da Silva</h1>
-    <p class="text-gray-400 text-lg mt-2">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
+    <img src="Img/Foto.jpg" alt="Foto de Daniela Leão" class="profile-photo">
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 space-y-12">
-
-    <!-- Resumo + Foto -->
-    <section class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-up">
-      <div class="flex-1 card text-center md:text-left">
-        <h2 class="text-2xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
-        <p>
-          Profissional de TI com conhecimento sólido na Área de TI, Redes, Cloud Computing e Suporte Técnico.
-          Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e inovação tecnológica.
-        </p>
-      </div>
-      <div class="flex-shrink-0 card">
-        <img src="Img/Foto.jpg" alt="Foto de Daniela Leão" class="profile-photo">
-      </div>
+  <main>
+    <section>
+      <h2>Resumo Profissional</h2>
+      <p>Profissional de Tecnologia da Informação com bastante conhecimento sólido na Área de TI, Redes, Cloud Computing e Suporte Técnico. Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e inovação tecnológica.</p>
     </section>
 
-    <!-- Formação Acadêmica -->
-    <section class="card" data-aos="fade-up" data-aos-delay="100">
-      <h2 class="text-2xl font-bold text-cyan-400 mb-4">Formação Acadêmica</h2>
-      <ul class="list-disc ml-6 space-y-1">
+    <section>
+      <h2>Formação Acadêmica</h2>
+      <ul>
         <li>Pós-Graduação em Análise de Sistemas – UFRA (2011)</li>
         <li>Tecnóloga em Redes de Computadores – ESAMAZ (2010)</li>
       </ul>
     </section>
 
-    <!-- Experiência Profissional -->
-    <section class="card" data-aos="fade-up" data-aos-delay="200">
-      <h2 class="text-2xl font-bold text-cyan-400 mb-4">Experiência Profissional</h2>
-      <ul class="list-disc ml-6 space-y-2">
+    <section>
+      <h2>Experiência Profissional</h2>
+      <ul>
         <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
         <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</li>
         <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</li>
@@ -103,56 +176,16 @@
       </ul>
     </section>
 
-    <!-- Cursos / Certificações -->
-    <section class="card" data-aos="fade-up" data-aos-delay="300">
-      <h2 class="text-2xl font-bold text-cyan-400 mb-4">Cursos / Certificações</h2>
-      <ul class="list-disc ml-6 space-y-1">
-        <li>Microsoft Cloud & DevOps: Azure AD, Segurança, Monitoramento, Governança, Azure DevOps, GitHub Copilot, Boards, Pipelines.</li>
-        <li>Power BI – Relatórios e Dashboards.</li>
-        <li>IA Generativa – Starse Tech Academy (AI for Leaders / IA para Todos)</li>
-        <li>Redes de Computadores, Configuração de Roteadores, Administração TI, Segurança da Informação</li>
-      </ul>
-    </section>
-
-    <!-- Competências -->
-    <section class="card" data-aos="fade-up" data-aos-delay="400">
-      <h2 class="text-2xl font-bold text-cyan-400 mb-4">Competências Técnicas</h2>
-      <ul class="list-disc ml-6 space-y-1">
-        <li>Cloud e Infraestrutura: Azure, DevOps, Exchange, Active Directory, VMware, ITIL.</li>
-        <li>Monitoramento: Zabbix, OCS Inventory.</li>
-        <li>Análise de Dados: Power BI.</li>
-        <li>Redes e Suporte: Montagem/Manutenção de Computadores, Configuração de Sistemas, troubleshooting.</li>
-      </ul>
-      <h2 class="text-2xl font-bold text-cyan-400 mt-6 mb-4">Competências Comportamentais</h2>
-      <ul class="list-disc ml-6 space-y-1">
-        <li>Gestão de projetos e governança de TI.</li>
-        <li>Trabalho em equipe e liderança técnica.</li>
-        <li>Comunicação clara e foco em resultados.</li>
-      </ul>
-    </section>
-
-    <!-- Contato -->
-    <section class="card text-center" data-aos="fade-up" data-aos-delay="500">
-      <h2 class="text-2xl font-bold text-cyan-400 mb-4">Contato</h2>
+    <section class="contact">
+      <h2>Contato</h2>
       <p>Psg. Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
       <p>📞 (61) 98258-2993 | ✉️ <a href="mailto:Daniela.leao83@gmail.com">Daniela.leao83@gmail.com</a></p>
-      <div class="flex justify-center space-x-6 mt-4">
+      <div class="social">
         <a href="https://github.com/danielaleao83-glitch" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/danielaleao83" target="_blank">LinkedIn</a>
       </div>
     </section>
-
   </main>
 
-  <script>
-    AOS.init({ duration: 1200, once: true });
-
-    tsParticles.load("tsparticles", {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#00ffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.3 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1, direction: "none", outModes: "bounce" },
-        links:
+</body>
+</html>
