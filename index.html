@@ -5,187 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Daniela Leão</title>
 
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS para animações -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <style>
-    /* Fonte e reset básico */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body {
       background: #0b0f1a;
       color: #e6edf3;
+      font-family: 'Inter', sans-serif;
       overflow-x: hidden;
     }
 
-    /* Fundo animado */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: radial-gradient(circle at 30% 30%, #00ffff33, transparent 30%),
-                  radial-gradient(circle at 70% 70%, #9b59b633, transparent 30%);
-      animation: moveBackground 20s linear infinite;
-      z-index: -1;
-    }
-    @keyframes moveBackground {
-      0% { transform: translate(0,0); }
-      50% { transform: translate(20px,20px); }
-      100% { transform: translate(0,0); }
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
-
-    header h1 {
+    h1 {
       font-size: 3rem;
-      text-align: center;
-      flex: 1;
+      font-weight: 800;
       color: #00ffff;
-      text-shadow: 0 0 10px #00ffff;
+      text-align: center;
+      margin-bottom: 0.5rem;
     }
 
     .profile-photo {
-      width: 180px;
-      height: 180px;
-      border-radius: 12px;
+      width: 200px;
+      height: 200px;
+      border-radius: 1rem;
       object-fit: cover;
-      margin-left: 40px;
-      border: 3px solid #00ffff;
-      box-shadow: 0 0 20px #00ffff55;
     }
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    section {
+    .card {
       background: rgba(22, 27, 34, 0.85);
-      border-radius: 12px;
-      padding: 20px 30px;
-      box-shadow: 0 0 20px #00ffff11;
+      border: 1px solid rgba(0, 255, 255, 0.15);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
     }
 
-    section h2 {
-      color: #00ffff;
-      margin-bottom: 10px;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #00ffff33;
-      padding-bottom: 5px;
-    }
-
-    section p, section li {
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-
-    ul { list-style: disc; margin-left: 20px; }
-
-    /* Contato centralizado */
-    .contact {
-      text-align: center;
-    }
-
-    .contact a {
+    a {
       color: #00bcd4;
-      text-decoration: none;
-      font-weight: bold;
+      transition: color 0.3s ease;
     }
-
-    .contact a:hover {
+    a:hover {
       color: #9b59b6;
-    }
-
-    .social {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .social a {
-      background: linear-gradient(90deg,#00bcd4,#9b59b6);
-      padding: 8px 16px;
-      border-radius: 8px;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .social a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 15px #00ffff55;
-    }
-
-    /* Responsivo */
-    @media (max-width: 900px){
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .profile-photo {
-        margin-left: 0;
-        margin-top: 20px;
-      }
-      header h1 {
-        font-size: 2.5rem;
-      }
     }
   </style>
 </head>
 <body>
+  <main class="max-w-5xl mx-auto px-6 py-12">
 
-  <header>
-    <h1>Daniela Leão da Silva</h1>
-    <img src="Img/Foto.jpg" alt="Foto de Daniela Leão" class="profile-photo">
-  </header>
-
-  <main>
-    <section>
-      <h2>Resumo Profissional</h2>
-      <p>Profissional de Tecnologia da Informação com bastante conhecimento sólido na Área de TI, Redes, Cloud Computing e Suporte Técnico. Especialista ITIL e Power BI, com histórico em governança de TI, Azure, DevOps, automação de processos, gestão de projetos e inovação tecnológica.</p>
+    <!-- Nome e Foto -->
+    <section class="flex flex-col md:flex-row items-center justify-between mb-12">
+      <h1 data-aos="fade-down">Daniela Leão da Silva</h1>
+      <img src="Img/Foto.jpg" alt="Foto de Daniela Leão" class="profile-photo mt-6 md:mt-0">
     </section>
 
-    <section>
-      <h2>Formação Acadêmica</h2>
-      <ul>
-        <li>Pós-Graduação em Análise de Sistemas – UFRA (2011)</li>
-        <li>Tecnóloga em Redes de Computadores – ESAMAZ (2010)</li>
-      </ul>
+    <!-- Resumo Profissional -->
+    <section class="card text-center" data-aos="fade-up">
+      <h2 class="text-2xl font-bold text-cyan-400 mb-4">Resumo Profissional</h2>
+      <p>
+        Profissional de TI com sólida experiência em Infraestrutura, Redes, Cloud Computing, DevOps e Power BI.
+        Especialista ITIL com histórico em governança de TI, Azure, automação de processos e gestão de projetos.
+      </p>
     </section>
 
-    <section>
-      <h2>Experiência Profissional</h2>
-      <ul>
+    <!-- Experiências -->
+    <section class="card" data-aos="fade-up">
+      <h2 class="text-2xl font-bold text-cyan-400 mb-4">Experiência Profissional</h2>
+      <ul class="list-disc ml-6 space-y-2">
         <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
         <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</li>
         <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</li>
         <li><strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>: Criação de usuários AD/Exchange, monitoramento de links via Zabbix.</li>
         <li><strong>SAT Sistemas – Analista de Suporte (2013)</strong>: Suporte remoto, testes de sistemas e configuração de redes.</li>
-        <li><strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>: Instalação de sistemas, manutenção de computadores e redes, treinamentos internos.</li>
-        <li><strong>ESAMAZ – Professora de Informática / Suporte Técnico (2008 – 2009)</strong></li>
+        <li><strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>: Instalação de sistemas, manutenção de computadores e redes.</li>
       </ul>
     </section>
 
-    <section class="contact">
-      <h2>Contato</h2>
+    <!-- Contato -->
+    <section class="card text-center" data-aos="fade-up">
+      <h2 class="text-2xl font-bold text-cyan-400 mb-4">Contato</h2>
       <p>Psg. Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
       <p>📞 (61) 98258-2993 | ✉️ <a href="mailto:Daniela.leao83@gmail.com">Daniela.leao83@gmail.com</a></p>
-      <div class="social">
+      <div class="flex justify-center space-x-6 mt-4">
         <a href="https://github.com/danielaleao83-glitch" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/danielaleao83" target="_blank">LinkedIn</a>
       </div>
     </section>
+
   </main>
 
+  <script>
+    AOS.init({ duration: 1200, once: true });
+  </script>
 </body>
 </html>
