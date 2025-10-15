@@ -42,6 +42,7 @@
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
+
     .card:hover {
       transform: rotateY(3deg) rotateX(2deg) scale(1.02);
       box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
@@ -70,7 +71,9 @@
     a {
       color: #00ffff;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
+
     a:hover {
       color: #9b59b6;
     }
@@ -84,6 +87,7 @@
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .social a:hover {
       transform: translateY(-3px);
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
@@ -118,14 +122,14 @@
   <!-- Fundo animado -->
   <div id="tsparticles"></div>
 
-  <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
-    <!-- Cabeçalho: Nome e Foto -->
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-12">
+    <!-- Cabeçalho com nome e foto -->
     <section class="header-section" data-aos="fade-down">
       <div class="header-text">
         <h1>Daniela Leão da Silva</h1>
         <p class="text-gray-400 text-lg">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
       </div>
-      <img src="img/Foto.jpg" alt="Foto de Daniela Leão" class="profile-photo" />
+      <img src="Img/foto.jpg" alt="Foto de Daniela Leão" class="profile-photo" />
     </section>
 
     <!-- Resumo Profissional -->
@@ -137,18 +141,6 @@
       </p>
     </section>
 
-    <!-- Experiências Profissionais -->
-    <section class="card" data-aos="fade-up">
-      <h2>Experiência Profissional</h2>
-      <ul class="list-disc ml-6 space-y-2">
-        <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, DevOps.</li>
-        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes e documentação.</li>
-        <li><strong>Stefanini – Ministério da Justiça (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos.</li>
-        <li><strong>Stefanini – Ministério do Trabalho (2014)</strong>: Criação de usuários AD/Exchange e monitoramento de links.</li>
-        <li><strong>SAT Sistemas – Analista de Suporte (2013)</strong>: Suporte remoto e configuração de redes.</li>
-      </ul>
-    </section>
-
     <!-- Formação Acadêmica -->
     <section class="card" data-aos="fade-up" data-aos-delay="100">
       <h2>Formação Acadêmica</h2>
@@ -158,8 +150,22 @@
       </ul>
     </section>
 
+    <!-- Experiência Profissional -->
+    <section class="card" data-aos="fade-up" data-aos-delay="200">
+      <h2>Experiência Profissional</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
+        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</li>
+        <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</li>
+        <li><strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>: Criação de usuários AD/Exchange, monitoramento de links via Zabbix.</li>
+        <li><strong>SAT Sistemas – Analista de Suporte (2013)</strong>: Suporte remoto, testes de sistemas e configuração de redes.</li>
+        <li><strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>: Instalação de sistemas, manutenção de computadores e redes.</li>
+        <li><strong>ESAMAZ – Professora de Informática / Suporte Técnico (2008 – 2009)</strong></li>
+      </ul>
+    </section>
+
     <!-- Contato -->
-    <section class="card text-center" data-aos="fade-up" data-aos-delay="200">
+    <section class="card text-center" data-aos="fade-up" data-aos-delay="300">
       <h2>Contato</h2>
       <p>Psg. Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
       <p>📞 (61) 98258-2993 | ✉️ <a href="mailto:Daniela.leao83@gmail.com">Daniela.leao83@gmail.com</a></p>
