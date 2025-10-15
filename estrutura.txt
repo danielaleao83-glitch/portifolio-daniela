@@ -1,6 +1,8 @@
 portifolio-daniela/
-│
 ├─ index.html
-├─ .nojekyll
 ├─ Img/
-│   └─ Foto.jpg
+│  └─ foto.jpg
+├─ css.txt
+├─ js/ (se houver)
+├─ package.json
+└─ outros arquivos...
