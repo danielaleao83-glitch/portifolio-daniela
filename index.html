@@ -8,64 +8,33 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- tsParticles -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
-
   <style>
     body {
-      background: linear-gradient(135deg, #0b0f1a 0%, #1a1f2b 100%);
+      background: linear-gradient(135deg, #0a0f1a, #1a1f2b);
       color: #e6edf3;
       font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-      perspective: 1000px;
-    }
-
-    /* Fundo de partículas */
-    #tsparticles {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    /* Card base */
-    .card {
-      background: rgba(22, 27, 34, 0.85);
-      border: 1px solid rgba(0, 255, 255, 0.15);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .card:hover {
-      transform: rotateY(3deg) rotateX(2deg) scale(1.02);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: 900;
+      background: linear-gradient(90deg, #00f0ff, #9b59b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       text-align: center;
-      color: #00ffff;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: 700;
       color: #00bcd4;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
     p, li {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     a {
@@ -78,71 +47,53 @@
       color: #9b59b6;
     }
 
-    .social a {
-      background: linear-gradient(90deg, #00bcd4, #9b59b6);
-      padding: 0.5rem 1rem;
-      border-radius: 0.75rem;
-      color: #fff;
-      font-weight: 600;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    .card {
+      background: rgba(22, 27, 34, 0.85);
+      border: 1px solid rgba(0, 255, 255, 0.15);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .social a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
     }
 
-    /* Foto quadrada à direita */
     .profile-photo {
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       border-radius: 1rem;
       object-fit: cover;
       margin-left: auto;
-    }
-
-    /* Container da seção principal com foto */
-    .header-section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .header-text {
-      flex: 1 1 300px;
-      text-align: center;
+      margin-right: auto;
+      display: block;
+      border: 2px solid #00ffff;
     }
   </style>
 </head>
 <body>
-  <!-- Fundo animado -->
-  <div id="tsparticles"></div>
-
-  <main class="max-w-6xl mx-auto px-6 py-12 space-y-12">
-    <!-- Cabeçalho com nome e foto -->
-    <section class="header-section" data-aos="fade-down">
-      <div class="header-text">
-        <h1>Daniela Leão da Silva</h1>
-        <p class="text-gray-400 text-lg">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
-      </div>
-      <img src="Img/foto.jpg" alt="Foto de Daniela Leão" class="profile-photo" />
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+    
+    <!-- Cabeçalho -->
+    <section class="text-center">
+      <h1>Daniela Leão da Silva</h1>
+      <p class="text-gray-400 text-lg">Profissional de TI | Infraestrutura | Cloud | DevOps | Power BI</p>
+      <img src="Img/foto.jpg" alt="Foto de Daniela Leão" class="profile-photo mt-6">
     </section>
 
     <!-- Resumo Profissional -->
-    <section class="card text-center" data-aos="fade-up">
+    <section class="card text-center">
       <h2>Resumo Profissional</h2>
       <p>
-        Profissional de TI com sólida experiência em Infraestrutura, Redes, Cloud Computing, DevOps e Power BI.
-        Especialista ITIL com histórico em governança de TI, Azure, automação de processos e gestão de projetos.
+        Profissional de TI com ampla experiência em Infraestrutura, Cloud, DevOps e Power BI. Especialista ITIL com histórico em governança de TI, automação de processos e gestão de projetos. Foco em inovação tecnológica e soluções corporativas modernas.
       </p>
     </section>
 
     <!-- Formação Acadêmica -->
-    <section class="card" data-aos="fade-up" data-aos-delay="100">
+    <section class="card">
       <h2>Formação Acadêmica</h2>
       <ul class="list-disc ml-6 space-y-1">
         <li>Pós-Graduação em Análise de Sistemas – UFRA (2011)</li>
@@ -151,48 +102,27 @@
     </section>
 
     <!-- Experiência Profissional -->
-    <section class="card" data-aos="fade-up" data-aos-delay="200">
+    <section class="card">
       <h2>Experiência Profissional</h2>
       <ul class="list-disc ml-6 space-y-2">
-        <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, metodologias ágeis (DevOps, SCRUM).</li>
-        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes, documentação e pesquisa de soluções inovadoras.</li>
-        <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos (Zabbix, VMware, OCS Inventory).</li>
-        <li><strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>: Criação de usuários AD/Exchange, monitoramento de links via Zabbix.</li>
-        <li><strong>SAT Sistemas – Analista de Suporte (2013)</strong>: Suporte remoto, testes de sistemas e configuração de redes.</li>
-        <li><strong>UFRA – Estagiária de Suporte Técnico (2009 – 2010)</strong>: Instalação de sistemas, manutenção de computadores e redes.</li>
-        <li><strong>ESAMAZ – Professora de Informática / Suporte Técnico (2008 – 2009)</strong></li>
+        <li><strong>Bobinas Com – Analista de Infraestrutura (2019 – 2025)</strong>: Gestão de infraestrutura, Azure, Exchange, AD, SLA, ITIL, DevOps.</li>
+        <li><strong>Junto Telecom – Analista de Suporte (2016)</strong>: Suporte técnico, padronização de ambientes e documentação.</li>
+        <li><strong>Stefanini – Ministério da Justiça – Analista de Governança (2014 – 2015)</strong>: Gestão de projetos e relatórios técnicos.</li>
+        <li><strong>Stefanini – Ministério do Trabalho e Emprego – Técnica de Suporte (2014)</strong>: AD/Exchange, monitoramento de links via Zabbix.</li>
       </ul>
     </section>
 
     <!-- Contato -->
-    <section class="card text-center" data-aos="fade-up" data-aos-delay="300">
+    <section class="card text-center">
       <h2>Contato</h2>
       <p>Psg. Lopo de Castro Nº12 | Cidade Velha - Belém – PA</p>
       <p>📞 (61) 98258-2993 | ✉️ <a href="mailto:Daniela.leao83@gmail.com">Daniela.leao83@gmail.com</a></p>
-      <div class="social flex justify-center space-x-6 mt-4">
-        <a href="https://github.com/danielaleao83-glitch" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/danielaleao83" target="_blank">LinkedIn</a>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="https://github.com/danielaleao83-glitch" target="_blank" class="social">GitHub</a>
+        <a href="https://www.linkedin.com/in/danielaleao83" target="_blank" class="social">LinkedIn</a>
       </div>
     </section>
+
   </main>
-
-  <!-- Scripts -->
-  <script>
-    AOS.init({ duration: 1200, once: true });
-
-    tsParticles.load("tsparticles", {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#00ffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.3 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1, direction: "none", outModes: "bounce" },
-        links: { enable: true, color: "#00ffff", distance: 120, opacity: 0.3 }
-      },
-      background: { color: "#0b0f1a" },
-      fpsLimit: 60
-    });
-  </script>
 </body>
 </html>
