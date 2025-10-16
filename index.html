@@ -16,6 +16,7 @@
       overflow-x: hidden;
     }
 
+    /* Nome vibrante */
     h1 {
       font-size: 5rem;
       font-weight: 900;
@@ -23,6 +24,7 @@
       background-size: 300% 300%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-align: center;
       animation: brilho 6s ease-in-out infinite;
       margin-bottom: 1rem;
     }
@@ -37,7 +39,7 @@
       font-size: 2rem;
       font-weight: 700;
       color: #00e6ff;
-      text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+      text-shadow: 0 0 10px rgba(0, 230, 255, 0.4);
       margin-bottom: 0.75rem;
     }
 
@@ -77,9 +79,12 @@
       height: 260px;
       border-radius: 1.25rem;
       object-fit: cover;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
       border: 3px solid #00ffff;
       box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
-      transition: transform 0.4s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .profile-photo:hover {
@@ -106,7 +111,7 @@
 <body>
   <main class="max-w-6xl mx-auto px-6 py-12 space-y-12">
 
-    <!-- Cabeçalho -->
+    <!-- Cabeçalho: nome + foto -->
     <section class="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
       <div class="md:w-2/3">
         <h1>Daniela Leão da Silva</h1>
