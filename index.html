@@ -14,14 +14,17 @@
       color: #e6edf3;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
+      margin: 0;
+      padding: 0;
     }
 
     h1 {
-      font-size: 6rem; /* Nome maior */
+      font-size: 6rem;
       font-weight: 900;
       background: linear-gradient(90deg, #00e6ff, #7a00ff, #ff0099);
       background-size: 300% 300%;
       -webkit-background-clip: text;
+      background-clip: text; /* compatibilidade */
       -webkit-text-fill-color: transparent;
       text-align: center;
       animation: brilho 6s ease-in-out infinite;
